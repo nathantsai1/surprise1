@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- skibidi page -->
+        <!-- hi chat -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>It's not scarry</title>
+        <link rel="stylesheet" href="static/styles.css">
+    </head>
+    <body>
+        <div>
+            <button id="hide1" onclick="myFunction()">no clicko thiso buttono?</button>
+        </div>
+        <div id="hide2">
+            <h5 id="hidden"></h5>
+            <h5>Happy Valentines day chat! It's only 5 days away!</h5>
+            <audio id="audio" src="static/background.mp3" type="mp3"></audio>
+            <div class="wide">
+            <a href="index.html"><img width="700" src="static/valentines.jpeg"></a>
+            <a href="index.html"><img width="700" src="static/valentines.jpeg"></a>
+        </div>
+        </div>
+        <script>
+            let hide2 = document.getElementById('hide2');
+            hide2.style.display = 'none';
+            function myFunction() {
+                let hide1 = document.getElementById('hide1');
+                hide1.style.display = 'none';
+                hide2.style.display = 'block';
+                let myAudio = document.querySelector('#audio');
+                myAudio.play();
+                setTimeout(function(){
+                    let hidden = document.getElementById('hidden');
+                    hidden.innerText = 'Click an image to get out';
+                }, 3000);
+            }
+        </script>
+    </body>
+</html>
